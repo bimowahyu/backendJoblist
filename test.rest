@@ -1,0 +1,86 @@
+###
+post http://localhost:5100/createUsers
+Content-Type: application/json
+
+{
+    "name": "admin",
+    "username":"admin",
+    "password": "admin",
+    "confpassword": "admin",
+    "role": "admin"
+}
+
+###
+put http://localhost:5100/updateUsers/78f94da3-075e-4802-add6-20bfa269e9b3
+Content-Type: application/json
+
+{
+    "name": "User",
+    "username":"user",
+    "password": "user",
+    "confpassword": "user",
+    "role": "user"
+}
+
+
+###
+get http://localhost:5100/users
+
+###
+delete http://localhost:5100/deleteUsers/9b4e9ed6-7d07-4ac9-86d3-17d720ada9c3
+
+###
+get http://localhost:5100/users/1809a9dc-0380-4b13-a27a-5a5d0a1b0b41
+
+//loginadmin
+###
+post  http://localhost:5100/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+//loginuser
+###
+post  http://localhost:5100/login
+Content-Type: application/json
+
+{
+    "username": "user",
+    "password": "user"
+}
+
+###
+get http://localhost:5100/me
+
+###
+post http://localhost:5100/createjob
+Content-Type: application/json
+
+{
+    "job": "Contoh Baru Hpaus",
+    "date": "2024-10-22"
+}
+
+###
+get http://localhost:5100/job
+
+###
+get http://localhost:5100/job/3e49bae6-b5fc-4399-84cb-07461d83297a
+
+###
+put http://localhost:5100/updatejob/3e49bae6-b5fc-4399-84cb-07461d83297a
+Content-Type: application/json
+
+{
+    "jobData": "test update baru",
+    "date": "2024-10-22"
+}
+
+###
+delete http://localhost:5100/deletejob/12f6bbab-901a-4815-8f99-d584adad1cce
+
+###
+get http://localhost:5100/getjobmonth/?bulan=10&tahun=2024
